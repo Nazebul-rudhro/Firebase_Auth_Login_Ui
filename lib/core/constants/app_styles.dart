@@ -4,7 +4,7 @@ import 'package:login/core/constants/app_colors.dart';
 
 class AppStyles {
   static TextStyle headingStyle = TextStyle(
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColors.textBlack,
   );

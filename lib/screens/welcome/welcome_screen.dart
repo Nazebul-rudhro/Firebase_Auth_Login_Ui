@@ -1,10 +1,10 @@
-import 'package:custom_clippers/custom_clippers.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:login/screens/auth/sign_in_screen.dart.dart';
+import '../../core/constants/app_routes.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,49 +19,39 @@ class WelcomeScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.50,
                 width: double.infinity,
                 color: Colors.white,
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 40),
-                    Text(
+                    const SizedBox(height: 40),
+                    const Text(
                       "Welcome",
-                      style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 10),
-                    Text(
-                      "Lorem ipsum dolor sit amet consectetur.\nLorem id sit",
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Make a splash with this stylish UI.\nModern and artistic touch.",
                       style: TextStyle(color: Colors.grey, fontSize: 16),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushAndRemoveUntil(
+                        // ERROR FIX: pushAndRemoveUntil er bodle pushNamedAndRemoveUntil hobe
+                        Navigator.pushNamedAndRemoveUntil(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => SignIn(),
-                          ),
+                          AppRoute.signIn,
                               (route) => false,
                         );
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            "Continue",
-                            style: TextStyle(color: Colors.grey),
-                          ),
+                        children: const [
+                          Text("Continue", style: TextStyle(color: Colors.grey)),
                           SizedBox(width: 10),
                           CircleAvatar(
                             backgroundColor: Color(0xFFFA8072),
                             radius: 25,
-                            child: Icon(
-                              Icons.arrow_forward,
-                              color: Colors.white,
-                            ),
+                            child: Icon(Icons.arrow_forward, color: Colors.white),
                           )
                         ],
                       ),
@@ -76,4 +66,3 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
-
