@@ -6,7 +6,7 @@ A clean and professional **Mobile Application** built with Flutter and Firebase.
 
 ## 🔗 Live Demo (Web Preview)
 Experience the app interface directly in your browser:
-[**Launch Live Preview**](https://my-flutter-login-app.vercel.app)
+[**Launch Live Preview**](https://my-flutter-login-app.vercel.app/)
 
 ---
 
