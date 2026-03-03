@@ -1,4 +1,3 @@
-# Firebase_Auth_Login_Ui
 # 📱 Firebase Auth - Complete Flutter Mobile App
 
 A clean and professional **Mobile Application** built with Flutter and Firebase. This project demonstrates a robust Authentication Flow, including Smart Auto-Login, Password Recovery, and State Management.
